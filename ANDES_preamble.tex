@@ -1,0 +1,71 @@
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{hyperref} % \hypersetup{hidelinks=true}  % avoid colored box in links
+\usepackage{multirow}
+\usepackage{tabularx}
+
+% redefine the X column to be based on a m-column instead of a p-column
+\renewcommand\tabularxcolumn[1]{m{#1}}
+
+\usepackage{longtable}
+\usepackage[table]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{tcolorbox}
+
+% Select Arial font for the whole document
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Document geometry
+\usepackage[a4paper, includehead,
+  textwidth=16cm, textheight=23cm,
+  headheight=2.3cm,
+  includemp,
+  marginparsep=0.cm,
+  marginparwidth=0.cm,
+  %showframe,
+]{geometry}
+
+
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
+\usepackage{tocloft}
+
+% AD and RD entries
+\newenvironment{ADlist}
+               {\begin{enumerate}[start=1,label={AD\arabic*}]}  % \bfseries
+               {\end{enumerate}}               
+\newenvironment{RDlist}
+               {\begin{enumerate}[start=1,label={RD\arabic*}]}  % \bfseries
+               {\end{enumerate}}
+\newcommand{\ARDitem}[2]{\item \label{#1} {#2}}
+\newcommand{\citedoc}[1]{[\ref{#1}]}
+
+
+% List of requirements
+\newcommand{\listreqname}{List of Requirements:}
+\newlistof{req}{toreq}{\listreqname}
+\newcommand{\req}[2]{%
+\refstepcounter{req}
+\par\vspace{0.2cm}\noindent\textbf{\ESOreqprefix{}\thereq:} #2 \label{#1}\vspace{0.2cm}
+\addcontentsline{toreq}{req}
+{\protect \textbf{\ESOreqprefix{}\numberline{\thereq}}#2}\par}
+\newcommand{\citereq}[1]{\textbf{\ESOreqprefix{}\ref{#1}}}
+
+
+% List of questions
+\newcommand{\listquestionname}{List of Questions:}
+\newlistof{question}{toquestion}{\listquestionname}
+\newcommand{\question}[2]{%
+\refstepcounter{question}
+\par\vspace{0.2cm}\noindent\textbf{Q\thequestion:} #2 \label{#1}\vspace{0.2cm}
+\addcontentsline{toquestion}{question}
+{\protect \textbf{Q\numberline{\thequestion}}#2}\par}
+\newcommand{\citequestion}[1]{\textbf{Q\ref{#1}}}
+
+
+
+\definecolor{andesbrown}{rgb}{0.545, 0.278, 0.208}
+\definecolor{andesgray}{rgb}{0.949, 0.949, 0.949}

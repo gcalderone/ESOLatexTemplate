@@ -1,0 +1,104 @@
+% ====================================================================
+% Running header
+%
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyfoot{} % clear all footer fields
+
+\fancyhead[L]{
+  \begin{tabularx}{0.46\headwidth}{Xc}
+    \includegraphics[width=2.2cm]{media/ANDES_logo.jpg}  &  {\small \ESOdoctitle{}}\\
+  \end{tabularx}
+}
+\fancyhead[R]{
+  \begingroup
+  \setlength{\arrayrulewidth}{0mm} % remove table border
+  \footnotesize
+  \begin{tabularx}{0.48\headwidth}{|X|l|}
+    \hline
+        {\scriptsize Document number:}         &      \ESOdocnumber{}     \\\hline
+        {\scriptsize Document version:}        &      \ESOdocversion{}    \\\hline
+        {\scriptsize Page:}                    &      \thepage{} of \pageref{LastPage} \\\hline
+  \end{tabularx}
+  \endgroup
+}
+\fancyfoot[c]{
+  \footnotesize Document classification:  \ESOdocclassification{}
+}
+
+
+% ====================================================================
+% Title page
+%
+\thispagestyle{empty}
+\newgeometry{headheight=0cm, textheight=25cm}
+\begin{center}
+  \begin{tcolorbox}[colframe=white, colback=white, width=0.7\textwidth]
+    \begin{tabularx}{0.8\textwidth}{XX}
+      \includegraphics[width=3cm]{media/ANDES_logo.jpg}  &
+                      {\footnotesize \mbox{Programme: {\bf ESO-ELT}}}  % \mbox avoids word and line breaks
+
+                      \medskip
+
+                      {\footnotesize Project: {\bf ANDES}}\\
+    \end{tabularx}
+  \end{tcolorbox}
+\end{center}
+
+\vspace{3cm}
+
+\begin{center}
+  \begin{tcolorbox}[colframe=andesbrown, colback=andesgray, width=\textwidth]
+    \
+
+    \begin{center}
+      {\bf \Large \bigskip \textcolor{andesbrown} \ESOdoctitle{} }
+    \end{center}
+
+    \bigskip
+
+    \bigskip
+
+    {\bf Document number:} \ESOdocnumber{}
+
+    \medskip
+
+    {\bf Document verision:} \ESOdocversion{}
+
+    \smallskip
+
+    {\bf Document type:} \ESOdoctype{}
+
+    \smallskip
+
+    {\bf Document status:} \ESOdocstatus{}
+
+    \smallskip
+
+    {\bf Releasing organization:} \ESOdocorganization{}
+
+    \bigskip
+
+  \end{tcolorbox}
+\end{center}
+
+\vfill
+
+\begin{center}
+  \begin{tabularx}{\textwidth}{|l|X|l|c|}
+    \hline
+    {\bf \small Owner:}       &  \ESOowner{}             & \textcolor{gray}{Signature} & \textcolor{gray}{2023-12-31} \\[0.8cm] \hline
+    {\bf \small Approved by:} &  \ESOapprovedby{}        & \textcolor{gray}{Signature} & \textcolor{gray}{2023-12-31} \\[0.8cm] \hline
+    {\bf \small Released by:} &  \ESOreleasedby{}        & \textcolor{gray}{Signature} & \textcolor{gray}{2023-12-31} \\[0.8cm] \hline
+    \end{tabularx}
+\end{center}
+
+
+\restoregeometry
+
+% ====================================================================
+% Table of contents
+\newpage
+\tableofcontents \thispagestyle{fancy}
+
+

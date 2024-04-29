@@ -1,38 +1,4 @@
 \documentclass[12pt,a4paper]{article}
-\usepackage[english]{babel}
-\usepackage[T1]{fontenc}
-\usepackage{graphicx}
-\usepackage{hyperref} % \hypersetup{hidelinks=true}  % avoid colored box in links
-\usepackage{multirow}
-\usepackage{tabularx}
-
-% redefine the X column to be based on a m-column instead of a p-column
-\renewcommand\tabularxcolumn[1]{m{#1}}
-
-\usepackage{longtable}
-\usepackage[table]{xcolor}
-\usepackage{fancyhdr}
-\usepackage{lipsum}
-
-\usepackage{tcolorbox}
-\definecolor{andesbrown}{rgb}{0.545, 0.278, 0.208}
-\definecolor{andesgray}{rgb}{0.949, 0.949, 0.949}
-
-% Select Arial font for the whole document
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
-
-% Document geometry
-\usepackage[a4paper, includehead,
-  textwidth=16cm, textheight=23cm,
-  headheight=2.3cm,
-  includemp,
-  marginparsep=0.cm,
-  marginparwidth=0.cm,
-  %showframe,
-]{geometry}
-
-\include{ESODefinitions.tex}
 
 % ====================================================================
 % Document properties
@@ -50,106 +16,11 @@
 \newcommand{\ESOapprovedby}{TBD ApprovedBy}
 \newcommand{\ESOreleasedby}{TBD ReleasedBy}
 
+\include{ANDES_preamble.tex}
 
 \begin{document}
-% ====================================================================
-% Running header
-%
-\pagestyle{fancy}
-\fancyhead{} % clear all header fields
-\fancyfoot{} % clear all footer fields
 
-\fancyhead[L]{
-  \begin{tabularx}{0.46\headwidth}{Xc}
-    \includegraphics[width=2.2cm]{media/ANDES_logo.jpg}  &  {\small \ESOdoctitle{}}\\
-  \end{tabularx}
-}
-\fancyhead[R]{
-  \begingroup
-  \setlength{\arrayrulewidth}{0mm} % remove table border
-  \footnotesize
-  \begin{tabularx}{0.48\headwidth}{|X|l|}
-    \hline
-        {\scriptsize Document number:}         &      \ESOdocnumber{}     \\\hline
-        {\scriptsize Document version:}        &      \ESOdocversion{}    \\\hline
-        {\scriptsize Page:}                    &      \thepage{} of \pageref{LastPage} \\\hline
-  \end{tabularx}
-  \endgroup
-}
-\fancyfoot[c]{
-  \footnotesize Document classification:  \ESOdocclassification{}
-}
-
-
-% ====================================================================
-% Title page
-%
-\thispagestyle{empty}
-\newgeometry{headheight=0cm, textheight=25cm}
-\begin{center}
-  \begin{tcolorbox}[colframe=white, colback=white, width=0.7\textwidth]
-    \begin{tabularx}{0.8\textwidth}{XX}
-      \includegraphics[width=3cm]{media/ANDES_logo.jpg}  &
-                      {\footnotesize \mbox{Programme: {\bf ESO-ELT}}}  % \mbox avoids word and line breaks
-
-                      \medskip
-
-                      {\footnotesize Project: {\bf ANDES}}\\
-    \end{tabularx}
-  \end{tcolorbox}
-\end{center}
-
-\vspace{3cm}
-
-\begin{center}
-  \begin{tcolorbox}[colframe=andesbrown, colback=andesgray, width=\textwidth]
-    \
-
-    \begin{center}
-      {\bf \Large \bigskip \textcolor{andesbrown} \ESOdoctitle{} }
-    \end{center}
-
-    \bigskip
-
-    \bigskip
-
-    {\bf Document number:} \ESOdocnumber{}
-
-    \medskip
-
-    {\bf Document verision:} \ESOdocversion{}
-
-    \smallskip
-
-    {\bf Document type:} \ESOdoctype{}
-
-    \smallskip
-
-    {\bf Document status:} \ESOdocstatus{}
-
-    \smallskip
-
-    {\bf Releasing organization:} \ESOdocorganization{}
-
-    \bigskip
-
-  \end{tcolorbox}
-\end{center}
-
-\vfill
-
-\begin{center}
-  \begin{tabularx}{\textwidth}{|l|X|l|c|}
-    \hline
-    {\bf \small Owner:}       &  \ESOowner{}             & \textcolor{gray}{Signature} & \textcolor{gray}{2023-12-31} \\[0.8cm] \hline
-    {\bf \small Approved by:} &  \ESOapprovedby{}        & \textcolor{gray}{Signature} & \textcolor{gray}{2023-12-31} \\[0.8cm] \hline
-    {\bf \small Released by:} &  \ESOreleasedby{}        & \textcolor{gray}{Signature} & \textcolor{gray}{2023-12-31} \\[0.8cm] \hline
-    \end{tabularx}
-\end{center}
-
-
-\restoregeometry
-
+\include{ANDES_title.tex}
 
 
 % ====================================================================
@@ -183,12 +54,6 @@
       {\bf Affected Section(s)} & {\bf Changes / Reason / Remarks}\\  \hline
       Sect.~\ref{sec:scope}&  Minor changes \\ \hline
 \end{tabularx}
-
-
-% ====================================================================
-% Table of contents
-\newpage
-\tableofcontents \thispagestyle{fancy}
 
 
 % ====================================================================
