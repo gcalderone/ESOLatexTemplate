@@ -1,29 +1,66 @@
 \section{Main matter}
 
-\subsection{Requirements}
-
 \lipsum[1]
 
-\req{req:nolights}{Switch off the lights.}
+\subsection{Requirements}
 
-\lipsum[2]
+\req{req:nolights}{Switch off the lights.}
 
 \req{req:generic_req}{Another requirement.}
 
 \subsection{Questions}
 
-\lipsum[3]
-
 \question{q:where}{Where is the coffee machine?}
-
-\lipsum[4]
 
 \question{q:when}{When is the coffee break scheduled?}
 
 
-\subsection{References}
+\subsection{Misc. examples}
 
-\lipsum[5]
+A quick introduction to \LaTeX{} is available \href{https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes}{here}.
+
+
+\subsubsection{Equations}
+
+\begin{equation}
+  \label{eq:eq}
+  E = mc^2
+\end{equation}
+
+
+\subsubsection{Lists, footnotes, font types and sizes}
+
+\begin{itemize}
+\item {\bf bold};
+\item {\it italic};
+\item {\tt teletype};
+  \begin{itemize}
+  \item normal;\footnote{Footnote example.}
+  \end{itemize}
+\item {\sc Small caps}.
+\end{itemize}
+
+\begin{enumerate}
+\item {\tiny tiny};
+\item {\small small};
+\item {\large large};
+\item {\Large Large};
+  \begin{enumerate}
+  \item {\Huge Huge}.
+  \end{enumerate}
+\end{enumerate}
+
+
+\subsubsection{Verbtaim text}
+
+\begin{verbatim}
+Text enclosed inside \texttt{verbatim} environment
+is printed in monospace font
+and all \LaTeX{} commands are ignored.
+\end{verbatim}
+
+
+\subsection{References}
 
 \begin{itemize}
 \item Sect.~\ref{sec:intro}, Sect.~\ref{sec:scope};
@@ -36,8 +73,6 @@
 
 \subsection{Figures and tables}
 
-\lipsum[6]
-
 \begin{figure}[hbtp!]
   \centering
   \includegraphics[width=0.5\textwidth]{media/m31}
@@ -45,8 +80,6 @@
     \label{fig:m31}
 \end{figure}
 
-
-\lipsum[7]
 
 \begin{table}[hbtp!]
   \centering
