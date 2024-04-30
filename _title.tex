@@ -85,12 +85,14 @@
 \vfill
 
 \begin{center}
+  \renewcommand{\arraystretch}{2.5}
   \begin{tabularx}{\textwidth}{|l|X|l|c|}
     \hline
-    {\bf \small Owner:}       &  \ESOowner{}             & \textcolor{gray}{Signature} & \textcolor{gray}{2023-12-31} \\[0.8cm] \hline
-    {\bf \small Approved by:} &  \ESOapprovedby{}        & \textcolor{gray}{Signature} & \textcolor{gray}{2023-12-31} \\[0.8cm] \hline
-    {\bf \small Released by:} &  \ESOreleasedby{}        & \textcolor{gray}{Signature} & \textcolor{gray}{2023-12-31} \\[0.8cm] \hline
-    \end{tabularx}
+    {\bf \small Owner:}       &  \ESOowner{}             & \parbox[c]{0.28\textwidth}{\includegraphics[width=0.28\textwidth]{media/signature_owner.jpg}}      & \ESOownerdate{}      \\ \hline
+    {\bf \small Approved by:} &  \ESOapprovedby{}        & \parbox[c]{0.28\textwidth}{\includegraphics[width=0.28\textwidth]{media/signature_approvedby.jpg}} & \ESOapprovedbydate{} \\ \hline
+    {\bf \small Released by:} &  \ESOreleasedby{}        & \parbox[c]{0.28\textwidth}{\includegraphics[width=0.28\textwidth]{media/signature_releasedby.jpg}} & \ESOreleasedbydate{} \\ \hline
+  \end{tabularx}
+  \renewcommand{\arraystretch}{1}
 \end{center}
 
 
