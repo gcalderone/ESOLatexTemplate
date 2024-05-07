@@ -2,6 +2,31 @@
 
 Template to write ANDES documents using LaTeX.
 
+# Breaking changes
+
+### From v1.0 to v2.0:
+- The `\req` and `\question` now accepts the label as an optional (i.e., non -mandatory) argument.  This is a breaking chage since the label is supposed to be provided with square brackets rather than curly ones. E.g.
+```
+% Old version (v1.0), using curly brackets for label
+\req{req:MyLabel}{My requirement}
+
+% Current version (v2.0), using square brackets for label or no label at all (an automatic one is internally generated):
+\req[req:MyLabel]{My requirement}
+\req{My requirement}
+```
+
+- Two new commands are available, `\reqlong` and `\questionlong` allowing to specify a custom text for the list of requirements and questions respectively;
+
+- Minor changes:
+  - `_preamble.tex` and `_title.tex` are now included with `\input` rather than `\include`;
+  - The *Scope* section in `introduction.tex` is now a `\subsection`;
+  - The new *Paragraphs* section in `example_section.tex` provides a guideline to use `\medskip` and `\noindent`;
+
+As usual, have a look to the `example_section.tex` file for examples on how to use the above commands.
+
+
+
+
 # Workflow
 
 - Rename the main file (`Main.tex`) into the final document name, e.g.: `mv Main.tex ANDES_InstrumentSoftwareRequirements.tex`.
