@@ -4,20 +4,62 @@
 
 \subsection{Requirements}
 
-\req{req:nolights}{Switch off the lights.}
+\req[req:nolights]{Switch off the lights.}
 
-\req{req:generic_req}{Another requirement.}
+\req[req:generic_req]{Another requirement.}
+
+\req{A requirement with no label (it can't be referenced in the \LaTeX source)}
+
+\reqlong{A very long requirement (this is only shown in the final table of requirements)}{A very long requirement, possibly including itemized lists:
+  \begin{itemize}
+  \item Foo;
+  \item Bar;
+  \item ...
+  \end{itemize}}
+
+
 
 \subsection{Questions}
 
-\question{q:where}{Where is the coffee machine?}
+\question[q:where]{Where is the coffee machine?}
 
-\question{q:when}{When is the coffee break scheduled?}
+\question[q:when]{When is the coffee break scheduled?}
+
+\question{A question with no label (it can't be referenced in the \LaTeX source)}
+
+\questionlong{A very long question (this is only shown in the final table of questions)}{A very long question, possibly including enumerated lists:
+  \begin{enumerate}
+  \item One;
+  \item Two;
+  \item ...
+  \end{enumerate}}
+
+
+
+
+
 
 
 \subsection{Misc. examples}
 
 A quick introduction to \LaTeX{} is available \href{https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes}{here}.
+
+
+\subsubsection{Paragraphs}
+
+A single newline will start a new indented paragraph with no vertical space separation.  To add a vertical space you may use \verb|\medskip|, and to avoid indentation you may use \verb|\noindent|. E.g.:
+
+{\it (paragraph starting after a simple newline)} \lipsum[2]
+
+\medskip
+
+{\it (paragraph starting after a \verb|\medskip|)} \lipsum[3]
+
+\medskip
+
+\noindent
+{\it (paragraph starting after a \verb|\medskip| and \verb|\noindent|)} \lipsum[4]
+
 
 
 \subsubsection{Equations}
